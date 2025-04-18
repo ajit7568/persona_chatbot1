@@ -16,19 +16,24 @@ origins = [
     "http://localhost:3000",  # React development server
     "http://localhost:5000",  # Production build
     "https://*.supabase.co",  # Allow Supabase domains
+    "https://persona-chatbot1.vercel.app",  # Vercel frontend
+    "https://persona-chatbot-tvdl.onrender.com",  # Render backend
 ]
 
 # Add Railway frontend URL from environment variable
 cors_origins = os.getenv("CORS_ORIGINS", "").split(",")
 origins.extend([origin.strip() for origin in cors_origins if origin.strip()])
 
+# Remove duplicates and empty strings
+origins = list(set(filter(None, origins)))
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization", "Accept"],
-    expose_headers=["Authorization"],
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+    expose_headers=["*"],  # Expose all headers
     max_age=3600  # Cache preflight requests for 1 hour
 )
 
