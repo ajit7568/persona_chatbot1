@@ -17,7 +17,8 @@ origins = [
     "http://localhost:5000",  # Production build
     "https://*.supabase.co",  # Allow Supabase domains
     "https://persona-chatbot1.vercel.app",  # Vercel frontend
-    "https://persona-chatbot-tvdl.onrender.com",  # Render backend
+    "https://persona-chatbot1.onrender.com",  # Render backend
+    "https://persona-chatbot-tvdl.onrender.com",  # Render backend (alternative)
 ]
 
 # Add Railway frontend URL from environment variable
