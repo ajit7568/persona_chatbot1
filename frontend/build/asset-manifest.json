@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c9243c65.css",
+    "main.js": "/static/js/main.a0c928c4.js",
+    "static/media/auth-bg.webp": "/static/media/auth-bg.df96e0c78aeffb45a916.webp",
+    "index.html": "/index.html",
+    "main.c9243c65.css.map": "/static/css/main.c9243c65.css.map",
+    "main.a0c928c4.js.map": "/static/js/main.a0c928c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9243c65.css",
+    "static/js/main.a0c928c4.js"
+  ]
+}
