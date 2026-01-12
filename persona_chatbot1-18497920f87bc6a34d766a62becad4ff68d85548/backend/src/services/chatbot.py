@@ -25,7 +25,7 @@ if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY not found in environment variables")
 
 # Define model constant
-GROQ_MODEL = "llama3-8b-8192"
+GROQ_MODEL = "llama3-70b-8192"
 
 class ChatMessage(BaseModel):
     user_id: int
@@ -227,4 +227,5 @@ async def send_message(chat_message: ChatMessage):
 
 @router.get("/chat/history", response_model=List[ChatMessage])
 async def get_chat_history():
+
     return chat_history
